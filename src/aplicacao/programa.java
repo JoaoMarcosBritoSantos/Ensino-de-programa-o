@@ -26,6 +26,22 @@ public static void main(String[] args) {
 	System.out.printf("A maioria da compras foi em dinheiro, cartão, ou boleto (D,C,B)? ");
 	maioriadascompras = sc.next().charAt(0);
 	System.out.println(" ");
+	
+	if (quantidadedecompras == 0) {
+		scorecompras = 0;
+	}
+	else if (quantidadedecompras >= 2 && ticket <= 3000) {
+		scorecompras = 20;
+	}
+	else if (quantidadedecompras < 2 && ticket <= 3000) {
+		scorecompras = 40;
+	}
+	else {
+		scorecompras = 60;
+	}
+	
+	System.out.println(" ");
+	System.out.printf("Score de volume de compras = ", scorecompras);
 
 		sc.close();
 	}
