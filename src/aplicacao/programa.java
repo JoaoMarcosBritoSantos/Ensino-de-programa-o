@@ -42,6 +42,35 @@ public static void main(String[] args) {
 	
 	System.out.println(" ");
 	System.out.printf("Score de volume de compras = ", scorecompras);
+	
+	
+	if (atraso == 0 && quantidadedecompras == 0) {
+		scoreinadimplencia = 0;
+	}
+	else if (atraso <= 1 && quantidadedecompras <= 1) {
+		scoreinadimplencia = 15;
+	}
+	else if (atraso == 0 && quantidadedecompras <= 1) {
+		scoreinadimplencia = 30;
+	}
+	else {
+		scorecompras = 00;
+	}
+	
+	System.out.println(" ");
+	System.out.printf("Score de inadimplência = ", scoreinadimplencia);
+
+	if (quantidadedecompras >= 1 && maioriadascompras == ('D')) {
+		scoreformadepagamento = 5;
+	}
+		else {
+		scoreformadepagamento = 10;
+	}
+	
+	System.out.println(" ");
+	System.out.printf("Score de forma de pagamento = ", scoreformadepagamento);
+
+	
 
 		sc.close();
 	}
