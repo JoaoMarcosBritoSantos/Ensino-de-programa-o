@@ -8,8 +8,9 @@ public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	
 	
-	int  quantidadedecompras, atraso, scorecompras, scoreinadimplencia, scoreformadepagamento;
+	int  quantidadedecompras, atraso, scorecompras, scoreinadimplencia, scoreformadepagamento, scoretotal;
 	char maioriadascompras;
+	
 	double ticket;
 	
 	System.out.println("SISTEMA DE PERFIL DO CLIENTE");
@@ -69,7 +70,23 @@ public static void main(String[] args) {
 	
 	System.out.println(" ");
 	System.out.printf("Score de forma de pagamento = ", scoreformadepagamento);
-
+	
+	
+	if (scoretotal <= 25) {
+		System.out.println(" ");
+		System.out.println("Classificação final = BRONZE");
+	}
+	
+	else if (scoretotal < 25 && scoretotal >= 75) {
+		System.out.println(" ");
+		System.out.println("Classificação final = PRATA");
+	}
+	
+	else {
+		System.out.println(" ");
+		System.out.println("Classificação final = OURO");
+		
+	}
 	
 
 		sc.close();
