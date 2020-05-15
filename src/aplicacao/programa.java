@@ -8,7 +8,7 @@ public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	
 	
-	int  quantidadedecompras, atraso;
+	int  quantidadedecompras, atraso, scorecompras, scoreinadimplencia, scoreformadepagamento;
 	char maioriadascompras;
 	double ticket;
 	
