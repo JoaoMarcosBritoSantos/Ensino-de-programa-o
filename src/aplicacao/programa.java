@@ -8,9 +8,8 @@ public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	
 	
-	int  quantidadedecompras, atraso, scorecompras, scoreinadimplencia, scoreformadepagamento, scoretotal;
+	int  quantidadedecompras, atraso, scorecompras=0, scoreinadimplencia=0, scoreformadepagamento=0, scoretotal=0;
 	char maioriadascompras;
-	
 	double ticket;
 	
 	System.out.println("SISTEMA DE PERFIL DO CLIENTE");
@@ -28,6 +27,8 @@ public static void main(String[] args) {
 	maioriadascompras = sc.next().charAt(0);
 	System.out.println(" ");
 	
+	
+	
 	if (quantidadedecompras == 0) {
 		scorecompras = 0;
 	}
@@ -42,7 +43,7 @@ public static void main(String[] args) {
 	}
 	
 	System.out.println(" ");
-	System.out.printf("Score de volume de compras = ", scorecompras);
+	System.out.printf("Score de volume de compras = ", + scorecompras);
 	
 	
 	if (atraso == 0 && quantidadedecompras == 0) {
@@ -51,16 +52,14 @@ public static void main(String[] args) {
 	else if (atraso <= 1 && quantidadedecompras <= 1) {
 		scoreinadimplencia = 15;
 	}
-	else if (atraso == 0 && quantidadedecompras <= 1) {
-		scoreinadimplencia = 30;
-	}
+	
 	else {
-		scorecompras = 00;
+		scoreinadimplencia = 30;
 	}
 	
 	System.out.println(" ");
 	System.out.printf("Score de inadimplência = ", scoreinadimplencia);
-
+	
 	if (quantidadedecompras >= 1 && maioriadascompras == ('D')) {
 		scoreformadepagamento = 5;
 	}
@@ -71,21 +70,24 @@ public static void main(String[] args) {
 	System.out.println(" ");
 	System.out.printf("Score de forma de pagamento = ", scoreformadepagamento);
 	
+	scoretotal = scoreinadimplencia + scoreformadepagamento + scorecompras;
 	
-	if (scoretotal <= 25) {
+	if (scoretotal <= 25){
 		System.out.println(" ");
-		System.out.println("Classificação final = BRONZE");
+		System.out.println("Classificação final = CLIENTE BRONZE");
 	}
 	
 	else if (scoretotal < 25 && scoretotal >= 75) {
 		System.out.println(" ");
-		System.out.println("Classificação final = PRATA");
+		System.out.println("Classificação final = CLIENTE PRATA");
 	}
 	
-	else {
+	else if (scoretotal > 75) {
 		System.out.println(" ");
-		System.out.println("Classificação final = OURO");
+		System.out.println("Classificação final = CLIENTE OURO");
 		
+	}
+		else {
 	}
 	
 
